@@ -9,6 +9,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.Map;
+
 public class Login_StepDefs {
 
     LoginPage loginPage = new LoginPage();
@@ -44,6 +46,12 @@ public class Login_StepDefs {
     public void verify_that_user_can_see_username(String username) {
         BrowserUtils.waitForVisibility(loginPage.nameOfUser,3);
         Assert.assertTrue(loginPage.nameOfUser.getText().contains(username));
+    }
+
+    @When("user enters following credentials")
+    public void user_enters_following_credentials(Map<String, String> dataTable) {
+        loginPage.login(dataTable.get("username"),dataTable.get("password"));
+
     }
 
 }

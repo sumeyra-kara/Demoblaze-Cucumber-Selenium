@@ -67,7 +67,7 @@
                     <runOrder>Alphabetical</runOrder>
                     <!--<rerunFailingTestsCount>1</rerunFailingTestsCount>-->
                     <includes>
-                        <include>**/*Cukes_Runner.java</include>
+                        <include>**/*Demoblaze_Runner.java</include>
                         <include>**/*FailedTestRunner.java</include>
                     </includes>
                 </configuration>

@@ -22,7 +22,7 @@ Feature: login functionality
       | batch16     | Test123- |
       | testSumeyra | kara1234 |
 
-  @wip
+
   Scenario Outline: positive login test DDT with dataTable
     When user enters following credentials
       | username | <username> |

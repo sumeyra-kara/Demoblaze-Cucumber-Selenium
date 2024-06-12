@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage{
-
     @FindBy(id = "loginusername")
     public WebElement loginUsernameInput;
 
@@ -20,7 +19,6 @@ public class LoginPage extends BasePage{
         loginPasswordInput.sendKeys(ConfigReader.get("password"));
         loginButton.click();
     }
-
 
     public void login(String username,String password){
         loginUsernameInput.sendKeys(username);

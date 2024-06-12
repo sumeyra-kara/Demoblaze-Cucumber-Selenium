@@ -2,6 +2,7 @@ package com.demoblaze.pages;
 
 import com.demoblaze.utilities.BrowserUtils;
 import com.demoblaze.utilities.Driver;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.WebElement;
@@ -44,6 +45,8 @@ public class HomePage extends BasePage{
         return price;
 
     }
+
+
 
 
 

@@ -3,10 +3,12 @@ package com.demoblaze.step_definitions;
 import com.demoblaze.pages.CartPage;
 import com.demoblaze.pages.HomePage;
 import com.demoblaze.utilities.BrowserUtils;
+import com.demoblaze.utilities.Driver;
 import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 
 public class PlaceOrder_StepDefs {
     HomePage homePage=new HomePage();
@@ -29,4 +31,7 @@ public class PlaceOrder_StepDefs {
     public void verify_the_purchase_order() {
         Assert.assertEquals(expectedAmount,actualAmount);
     }
+
+
+
 }

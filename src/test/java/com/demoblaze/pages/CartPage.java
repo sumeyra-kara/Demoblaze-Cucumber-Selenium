@@ -23,15 +23,12 @@ public class CartPage extends BasePage{
     }
     @FindBy(xpath = "//tbody/tr")
     public List<WebElement> productList;
-
     @FindBy(css= ".btn.btn-success")
     public WebElement orderButton;
     @FindBy(id= "name")
     public WebElement nameInput;
-
     @FindBy(id= "country")
     public WebElement countryInput;
-
     @FindBy(id= "city")
     public WebElement cityInput;
     @FindBy(id= "card")
@@ -50,10 +47,6 @@ public class CartPage extends BasePage{
 
     @FindBy(xpath= "//button[text()='OK']")
     public WebElement okButton ;
-
-
-
-
 
     public int removeProductFromCart(String productName){
         menu("Cart").click();
@@ -75,7 +68,6 @@ public class CartPage extends BasePage{
         cardInput.sendKeys(faker.finance().creditCard());
         monthInput.sendKeys(String.valueOf(faker.number().numberBetween(1,12)));
         yearInput.sendKeys(String.valueOf(faker.number().numberBetween(2024,2033)));
-
     }
 
     public int productPreise(){
@@ -84,7 +76,6 @@ public class CartPage extends BasePage{
         return price;
     }
 
-
     public int placeOrderAndLogAmount(){
         orderButton.click();
         fillOutForm();
@@ -92,6 +83,10 @@ public class CartPage extends BasePage{
         okButton.click();
         return productPreise();
     }
+
+
+
+
 
 
 

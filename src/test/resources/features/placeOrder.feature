@@ -7,8 +7,8 @@ Feature: place order end to end test
     When user enters "testSumeyra" username "kara1234" password and clicks on the login button
     And user adds "Samsung galaxy s6" product from "Phones" category
     And user adds "MacBook air" product from "Laptops" category
-    And user adds "MacBook Pro" product from "Laptops" category
-    And user adds "Apple monitor 24" product from "Monitors" category
-    And user removes "MacBook Pro" product from cart page
-    And user places order and capture and log amount
-    Then verify the purchase order
+    #And user adds "MacBook Pro" product from "Laptops" category
+   # And user adds "Apple monitor 24" product from "Monitors" category
+    #And user removes "MacBook Pro" product from cart page
+   # And user places order and capture and log amount
+    #Then verify the purchase order

@@ -7,6 +7,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.List;
 
 public class HomePage extends BasePage{
     public WebElement category(String categoryName){
@@ -25,9 +30,16 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//a[.='Add to cart']")
     public WebElement addToCartButton;
 
+    @FindBy(id = "tbodyid")
+    public WebElement cartItems;
+
+    @FindBy(xpath = "//tbody[@id='tbodyid']/tr/td[4]/a")
+    public List<WebElement> deleteButton;
+
+
 
     public int addProductFromCategory(String productName,String categoryName){
-        try {
+     try {
             category(categoryName).click();
             product(productName).click();
         } catch (Exception e) {
@@ -43,6 +55,9 @@ public class HomePage extends BasePage{
         menu("Home").click();
 
         return price;
+
+
+
 
     }
 

@@ -48,6 +48,9 @@ public class CartPage extends BasePage{
     @FindBy(xpath= "//button[text()='OK']")
     public WebElement okButton ;
 
+    @FindBy(xpath= "//a[text()='Delete']")
+    public List<WebElement> deleteButton ;
+
     public int removeProductFromCart(String productName){
         menu("Cart").click();
         int price = Integer.parseInt(productPreise(productName).getText());
@@ -83,6 +86,27 @@ public class CartPage extends BasePage{
         okButton.click();
         return productPreise();
     }
+
+    public void cartControl(){
+        try {
+            menu("Cart").click();
+        } catch (Exception e) {
+            menu("Cart").click();
+        }
+        BrowserUtils.waitFor(2);
+        if (deleteButton.size()>0){
+            for (WebElement deleteBtn : deleteButton){
+                deleteBtn.click();
+            }
+            BrowserUtils.waitFor(4);
+        }
+
+        menu("Home").click();
+
+
+    }
+
+
 
 
 

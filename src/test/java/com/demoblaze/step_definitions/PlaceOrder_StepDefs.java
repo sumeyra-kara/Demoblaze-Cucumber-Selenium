@@ -15,6 +15,13 @@ public class PlaceOrder_StepDefs {
     CartPage cartPage = new CartPage();
     int expectedAmount=0;
     int actualAmount=0;
+
+    @When("user deletes all products from cart page")
+    public void user_deletes_all_products_from_cart_page() {
+        cartPage.cartControl();
+    }
+
+
     @When("user adds {string} product from {string} category")
     public void user_adds_product_from_category(String product, String category) {
         expectedAmount += homePage.addProductFromCategory(product,category);

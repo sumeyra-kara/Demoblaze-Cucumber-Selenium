@@ -70,6 +70,7 @@
                         <include>**/*Demoblaze_Runner.java</include>
                         <include>**/*FailedTestRunner.java</include>
                     </includes>
+
                 </configuration>
             </plugin>
             <plugin>

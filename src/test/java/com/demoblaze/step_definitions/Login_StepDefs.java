@@ -12,13 +12,11 @@ import org.junit.Assert;
 import java.util.Map;
 
 public class Login_StepDefs {
-
     LoginPage loginPage = new LoginPage();
 
     @Given("user is on the home page")
     public void user_is_on_the_home_page() {
         Driver.getDriver().get(ConfigReader.get("url"));
-
     }
 
     @When("user clicks on the login menu")
@@ -51,7 +49,6 @@ public class Login_StepDefs {
     @When("user enters following credentials")
     public void user_enters_following_credentials(Map<String, String> dataTable) {
         loginPage.login(dataTable.get("username"),dataTable.get("password"));
-
     }
 
 }

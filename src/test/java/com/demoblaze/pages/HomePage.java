@@ -19,7 +19,6 @@ public class HomePage extends BasePage{
         return Driver.getDriver().findElement(By.xpath(categoryPath));
     }
 
-
     public WebElement product (String productName){
         String productPath= "//a[text()='"+productName+"']";
         return Driver.getDriver().findElement(By.xpath(productPath));
@@ -29,14 +28,6 @@ public class HomePage extends BasePage{
 
     @FindBy(xpath = "//a[.='Add to cart']")
     public WebElement addToCartButton;
-
-    @FindBy(id = "tbodyid")
-    public WebElement cartItems;
-
-    @FindBy(xpath = "//tbody[@id='tbodyid']/tr/td[4]/a")
-    public List<WebElement> deleteButton;
-
-
 
     public int addProductFromCategory(String productName,String categoryName){
      try {
@@ -53,17 +44,7 @@ public class HomePage extends BasePage{
         BrowserUtils.waitForAlertPresent(5);
         Driver.getDriver().switchTo().alert().accept();
         menu("Home").click();
-
         return price;
-
-
-
-
     }
-
-
-
-
-
 
 }

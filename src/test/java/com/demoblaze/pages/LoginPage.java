@@ -7,10 +7,8 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends BasePage{
     @FindBy(id = "loginusername")
     public WebElement loginUsernameInput;
-
     @FindBy(id = "loginpassword")
     public WebElement loginPasswordInput;
-
     @FindBy(xpath = "//button[@onclick='logIn()']")
     public WebElement loginButton;
 
@@ -25,8 +23,5 @@ public class LoginPage extends BasePage{
         loginPasswordInput.sendKeys(password);
         loginButton.click();
     }
-
-
-
 
 }

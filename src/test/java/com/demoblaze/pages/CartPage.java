@@ -16,7 +16,6 @@ public class CartPage extends BasePage{
         String productDeletePath ="//tbody//tr/td[2][text()='"+productName+"']/following-sibling::td[2]/a";
         return Driver.getDriver().findElement(By.xpath(productDeletePath));
     }
-
     public WebElement productPreise(String productName){
         String productPricePath ="//tbody//tr/td[2][text()='"+productName+"']/following-sibling::td[1]";
         return Driver.getDriver().findElement(By.xpath(productPricePath));
@@ -35,19 +34,14 @@ public class CartPage extends BasePage{
     public WebElement cardInput;
     @FindBy(id= "month")
     public WebElement monthInput;
-
     @FindBy(id= "year")
     public WebElement yearInput;
-
     @FindBy(xpath= "//button[@onclick='purchaseOrder()']")
     public WebElement purchaseButton;
-
     @FindBy(xpath= "//p[@class='lead text-muted ']")
     public WebElement confirmationInfo;
-
     @FindBy(xpath= "//button[text()='OK']")
     public WebElement okButton ;
-
     @FindBy(xpath= "//a[text()='Delete']")
     public List<WebElement> deleteButton ;
 
@@ -100,10 +94,7 @@ public class CartPage extends BasePage{
             }
             BrowserUtils.waitFor(4);
         }
-
         menu("Home").click();
-
-
     }
 
 
